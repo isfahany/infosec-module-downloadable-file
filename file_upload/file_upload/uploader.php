@@ -55,7 +55,7 @@ if(isset($_POST["submit"])){
         $moved = move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
         if( $moved ) {
             echo "<br>Successfully uploaded </br>";
-            header('Location: http://localhost/file_upload/uploader.php?img='.$target_file);
+            header("Location: http://localhost/file_upload/".$target_file);
         }else {
             echo "<br/>Sorry, there was an error uploading your file.";
         }
